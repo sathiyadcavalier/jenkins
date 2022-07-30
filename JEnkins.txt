@@ -1,0 +1,10 @@
+General
+----------------------------------------
+To Enable better Collaboration
+
+Continous Integration is a major implementation which fulfills devops
+
+Architecture
+----------------------------------------
+master slave
+master master
