@@ -1,0 +1,215 @@
+$git config --global user.name 'softpro'
+
+$git config --global user.email 'softpro@gmail.com'
+
+$git config -l
+
+$git config --global core.autocrlf = true
+
+$git config --global credential.helper wincred
+
+$git init
+
+$tree .git
+
+$git log --oneline --graph
+
+Git Advanced Configuration
+----------------------------------------------
+Level 1 System
+
+Level 2 Global
+
+Level 3 Local
+
+$git log
+git
+$git config --global alias.lg "log --graph --online --decorate --all"
+
+Git Status
+------------------
+
+state 1 : Untracked
+state 2 : Unmodified
+state 3 : Modified
+state 4 : Stage State
+
+$ git status
+$ git add filename
+$ git diff
+$ git commit
+
+Git Unrelated Commit [Separate them]
+-----------------------------------------------------------------
++ and - are knows as hunks
++ means newly added
+- removed
+
+$ git add --patch
+$ git commit -v = to see the changes before commit.
+
+Git Files Handling
+--------------------------------------------------------------------
+mv - move/rename
+
+$ git mv file01 file02
+$ git diff --cached
+$ git rm filename
+$ git restore filename
+
+Git Branching and Merging
+-------------------------------------------------------------------------------------
+$ git branch <name of the branch>; git checkout <name of the branch>
+
+git branch <name of the branch> creates new branch. 
+git branch <name of the branch>
+
+$ git checkout <name of the branch>
+$ git commit -am "<commit message>"
+
+First merge  the changes made in master branch with feature branch then merge the feature branch with the main branch to avoid merge conflicts
+
+Git Branching Workflows
+-----------------------------------------------------------------------------------
+There are three major branching models
+
+1. Top-of-trunk
+    - 1 branch
+2. Master-and-topic
+    - 1 + N branches
+3. Progressive-stability
+    - 2 + N branches
+
+Branching Variations and mix-ins
+--------------------------------------------------
+Realease branches
+Hotfix branches
+
+Branch Management
+--------------------------------------------------
+$ git branch or $ git branch -a  - It is used to list out all the branches
+$ git branch -v  - for more details
+$ git branch --no-merged - to find the unmerged branch
+$ git branch --merged - to find the merged branch
+$ git branch -d >branch name> - to delete a branch
+$ git branch -D <branch name> - force delete before merges with main branch
+
+Git Conflicts
+-------------------------------------------------
+$ git show <branch name>
+
+Distributed Workflow
+-------------------------------------------------
+                 ------------------------
+                    Shared repository |
+                 ------------------------
+                   -        -        -
+
+                   -         -         -
+
+                  -          -          -
+
+                 -           -           -
+               Developer     -   Developer 
+                             -
+                         Developer
+
+Distributed Workflow
+------------------------
+1. Centralized Work Flow
+2. Integration manager pattern
+3. Dictator and Lieutenants model
+
+Git Hosting
+--------------------------------------------------
+1. SSH
+
+    Linux Server
+
+    "git" user
+
+    Each user: SSH Key
+
+    SSH in and create repository
+
+    [mailto:ssh@server:project.git]ssh@server:project.git
+
+    git-shell
+
+2. Internet hosting
+
+    GitHub, BitBucket, Gitlab
+
+    Easy administration
+
+    Easy project management
+
+    Accessible for non-technical
+
+    Access over HTTPS
+
+    Extras
+
+       Issue tracking
+
+       Code review
+
+       Documentation
+
+3. On-premises hosting
+
+    Runs on your machine
+
+    Runs inside your network
+
+    GitHub Enterprise,  BitBucket Server,                             
+
+    GitLab
+
+Git Hosting
+--------------------------------------------------SSH
+Internet Hosting           
+On-premises Hosting Remotes
+
+--------------------------------------------------
+$ git remote add <name> <url>
+$ git remote add demo https://github.com/sathiyadcavalier/wilt
+
+GitHub and Integration
+----------------------------------------------------
+Summary
+Cross-linking
+Development assistance: continuous integration
+Continuous Deployment: shipping with merge button
+Miscellaneous: pretty much anything
+
+Note
+-----------------------------------------------------
+Fork
+Pull request
+Markdown
+Markdown files - .md and .markdown
+
+Working Directory -> Index -> Head
+
+Levels of Reset
+-----------------------------------------------------
+1. Move HEAD
+   - Stop here if --soft
+2. Update the index
+   - Stop here if --mixed (default)
+3. Update the working directory
+   - Stop here if --hard
+
+
+
+
+
+
+
+
+
+
+
+
+
